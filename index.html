@@ -10,9 +10,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <style>
 :root{
-  --pri:#94db00;--on-pri:#223600;--tert:#ffb596;--err:#ffb4ab;
-  --bg:#12131a;--s-low:#1a1b23;--s-mid:#1e1f27;--s-hi:#292931;--s-top:#34343c;
-  --on:#e3e1ec;--on2:#c8c5cb;--out:#47464b;
+  --pri:#5a8a00;--on-pri:#ffffff;--tert:#c46a3a;--err:#c44040;
+  --bg:#f4f5f7;--s-low:#ffffff;--s-mid:#f0f1f3;--s-hi:#e4e5e9;--s-top:#d4d5d9;
+  --on:#1a1b23;--on2:#5c5d66;--out:#d0d1d6;
   --bjt:#3b82f6;--ppp:#f97316;--pt:#ef4444;--kt:#22c55e;--dp:#60a5fa;
   --const-green:#2E8B57;--pl-pink:#E91E8C;
 }
@@ -21,7 +21,7 @@ body{background:var(--bg);color:var(--on);font-family:'Inter','Noto Sans Thai',s
 .hl{font-family:'Space Grotesk','Noto Sans Thai',sans-serif}
 
 /* Top bar */
-.topbar{position:sticky;top:0;z-index:50;background:rgba(18,19,26,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(148,219,0,.12);padding:.75rem 1.25rem}
+.topbar{position:sticky;top:0;z-index:50;background:rgba(244,245,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(90,138,0,.15);padding:.75rem 1.25rem}
 .topbar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:'Space Grotesk',sans-serif;font-size:1.125rem;font-weight:700;color:var(--pri)}
 .logo-sub{font-size:.7rem;color:var(--on2)}
@@ -64,10 +64,10 @@ body{background:var(--bg);color:var(--on);font-family:'Inter','Noto Sans Thai',s
 /* Gap boxes */
 .gap-row{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin:.75rem 0}
 .gap-box{border-radius:8px;padding:.75rem 1rem;border-left:4px solid}
-.gb1{background:rgba(255,181,150,.06);border-color:var(--tert)}
+.gb1{background:rgba(196,106,58,.06);border-color:var(--tert)}
 .gb1 .gt{color:var(--tert);font-size:.8rem;font-weight:700;margin-bottom:.2rem}
 .gb1 .gd{color:var(--on2);font-size:.75rem;line-height:1.6}
-.gb2{background:rgba(255,180,171,.06);border-color:var(--err)}
+.gb2{background:rgba(196,64,64,.06);border-color:var(--err)}
 .gb2 .gt{color:var(--err);font-size:.8rem;font-weight:700;margin-bottom:.2rem}
 .gb2 .gd{color:var(--on2);font-size:.75rem;line-height:1.6}
 
@@ -88,9 +88,9 @@ body{background:var(--bg);color:var(--on);font-family:'Inter','Noto Sans Thai',s
 .tbl .num{text-align:right;font-variant-numeric:tabular-nums}
 
 /* Insight box */
-.ins{background:rgba(148,219,0,.05);border-left:3px solid var(--pri);padding:.75rem;border-radius:6px;margin-top:.75rem;font-size:.8rem}
-.ins.warn{background:rgba(255,181,150,.05);border-color:var(--tert)}
-.ins.err{background:rgba(255,180,171,.05);border-color:var(--err)}
+.ins{background:rgba(90,138,0,.05);border-left:3px solid var(--pri);padding:.75rem;border-radius:6px;margin-top:.75rem;font-size:.8rem}
+.ins.warn{background:rgba(196,106,58,.05);border-color:var(--tert)}
+.ins.err{background:rgba(196,64,64,.05);border-color:var(--err)}
 .ins-l{font-size:.65rem;text-transform:uppercase;letter-spacing:.04em;font-weight:700;margin-bottom:.25rem;color:var(--pri)}
 .ins.warn .ins-l{color:var(--tert)}.ins.err .ins-l{color:var(--err)}
 
@@ -120,7 +120,7 @@ body{background:var(--bg);color:var(--on);font-family:'Inter','Noto Sans Thai',s
 .sub{font-size:.7rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--on2);margin:.75rem 0 .35rem}
 
 /* Disclaimer */
-.disclaimer{background:rgba(255,181,150,.06);border:1px solid rgba(255,181,150,.2);border-radius:6px;padding:.6rem .875rem;font-size:.7rem;color:var(--tert);line-height:1.6;margin-bottom:1rem}
+.disclaimer{background:rgba(196,106,58,.06);border:1px solid rgba(196,106,58,.2);border-radius:6px;padding:.6rem .875rem;font-size:.7rem;color:var(--tert);line-height:1.6;margin-bottom:1rem}
 
 /* Next-tab button */
 .next-tab-btn{display:flex;justify-content:flex-end;margin-top:1.5rem;margin-bottom:1rem}
@@ -138,10 +138,10 @@ body{background:var(--bg);color:var(--on);font-family:'Inter','Noto Sans Thai',s
 
 /* Tags */
 .tag{display:inline-block;font-size:.55rem;padding:1px 5px;border-radius:3px;font-weight:600}
-.tag-g1{background:rgba(255,181,150,.15);color:var(--tert);border:1px solid var(--tert)}
-.tag-g2{background:rgba(255,180,171,.15);color:var(--err);border:1px solid var(--err)}
+.tag-g1{background:rgba(196,106,58,.15);color:var(--tert);border:1px solid var(--tert)}
+.tag-g2{background:rgba(196,64,64,.15);color:var(--err);border:1px solid var(--err)}
 .tag-flat{background:var(--s-hi);color:var(--on2)}
-.tag-jump{background:rgba(255,181,150,.1);color:var(--tert);border:1px solid var(--tert)}
+.tag-jump{background:rgba(196,106,58,.1);color:var(--tert);border:1px solid var(--tert)}
 
 /* Two col */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:.75rem}
@@ -648,7 +648,7 @@ var FBJT=31.3,FPPP=24.6;
 // ═══════════════════════════════════════════════════
 // HELPERS
 // ═══════════════════════════════════════════════════
-var dG='rgba(255,255,255,0.06)',dT='#888',dF={size:9,family:'Inter'};
+var dG='rgba(0,0,0,0.08)',dT='#666',dF={size:9,family:'Inter'};
 function pillClass(p){if(p.indexOf('รวมไทยสร้างชาติ')>=0)return'p-rusc';if(p.indexOf('ประชาชน')>=0)return'p-ppp';if(p.indexOf('ภูมิใจไทย')>=0)return'p-bjt';if(p.indexOf('เพื่อไทย')>=0)return'p-pt';if(p.indexOf('กล้าธรรม')>=0)return'p-kt';if(p.indexOf('ประชาธิปัตย์')>=0)return'p-dp';return'p-o';}
 function pill(p){return'<span class="pill '+pillClass(p)+'">'+p+'</span>';}
 
@@ -681,19 +681,19 @@ new Chart(document.getElementById('cTurnout'),{type:'line',plugins:[gapP,pulseP]
 {label:'_g2p',data:s2P,borderColor:'#E91E8C',borderWidth:2,borderDash:[9,5],pointRadius:labels.map(function(l,i){return i===OG2?6:0;}),pointBackgroundColor:'#E91E8C',fill:false,stepped:true,spanGaps:false,order:1}
 ]},options:{responsive:true,maintainAspectRatio:false,animation:{duration:0},interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{filter:function(it){if(!it.dataset.label)return false;return it.dataset.label.charAt(0)!=='_'&&it.raw!==null;},callbacks:{title:function(its){if(!its.length)return'';var o2=oi(its[0].dataIndex);return(o2!==null&&snaps[o2])?snaps[o2].t:'';},label:function(it){var lb=it.dataset.label;if(lb.charAt(0)==='_'||it.raw===null)return null;return' '+lb+': '+Number(it.raw).toFixed(3)+'M';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:60,autoSkip:false,callback:function(v,i){return labels[i]||null;}},grid:{color:dG}},y:{title:{display:true,text:'ล้านคน',font:{size:10},color:dT},ticks:{callback:function(v){return v.toFixed(1)+'M';},font:{size:10},color:dT},grid:{color:dG}}}}});
 // Turnout table
-var tb=document.getElementById('turnoutBody');snaps.forEach(function(s,i){var pct=(s.v/FINAL_TO*100).toFixed(3);var delta=i===0?s.v:s.v-snaps[i-1].v;var isFlat=i>0&&s.v===snaps[i-1].v;var isG1=i===19,isG2=i===21;var tag='';if(isG1)tag='<span class="tag tag-g1">JUMP GAP1</span>';else if(isG2)tag='<span class="tag tag-g2">JUMP GAP2</span>';else if(isFlat)tag='<span class="tag tag-flat">FLAT</span>';else if(delta>1e6)tag='<span class="tag tag-jump">JUMP</span>';var bw=Math.min(100,parseFloat(pct));var bc=isG1||isG2?'var(--err)':delta>1e6?'var(--tert)':'var(--const-green)';var bg=isG1?'background:rgba(255,181,150,.08)':isG2?'background:rgba(255,180,171,.08)':'';var tr=document.createElement('tr');if(bg)tr.style.cssText=bg;var prevPct=i===0?0:(snaps[i-1].v/FINAL_TO*100);var deltaPct=i===0?0:parseFloat(pct)-prevPct;var deltaPctStr=i===0?'—':(deltaPct>=0?'+':'')+deltaPct.toFixed(3)+'%';tr.innerHTML='<td><b>'+s.t+'</b></td><td class="num">'+s.v.toLocaleString()+'</td><td class="num"><b>'+pct+'%</b></td><td><div class="pct-wrap"><div class="pct-bg"><div class="pct-fill" style="width:'+bw+'%;background:'+bc+'"></div></div></div></td><td class="num" style="color:'+(isG1||isG2?'var(--err)':isFlat?'var(--on2)':'var(--const-green)')+'">'+(i===0?'—':'+'+delta.toLocaleString())+'</td><td class="num" style="color:'+(isG1||isG2?'var(--err)':isFlat?'var(--on2)':'var(--const-green)')+'">'+deltaPctStr+'</td><td>'+tag+'</td>';tb.appendChild(tr);});
+var tb=document.getElementById('turnoutBody');snaps.forEach(function(s,i){var pct=(s.v/FINAL_TO*100).toFixed(3);var delta=i===0?s.v:s.v-snaps[i-1].v;var isFlat=i>0&&s.v===snaps[i-1].v;var isG1=i===19,isG2=i===21;var tag='';if(isG1)tag='<span class="tag tag-g1">JUMP GAP1</span>';else if(isG2)tag='<span class="tag tag-g2">JUMP GAP2</span>';else if(isFlat)tag='<span class="tag tag-flat">FLAT</span>';else if(delta>1e6)tag='<span class="tag tag-jump">JUMP</span>';var bw=Math.min(100,parseFloat(pct));var bc=isG1||isG2?'var(--err)':delta>1e6?'var(--tert)':'var(--const-green)';var bg=isG1?'background:rgba(196,106,58,.08)':isG2?'background:rgba(196,64,64,.08)':'';var tr=document.createElement('tr');if(bg)tr.style.cssText=bg;var prevPct=i===0?0:(snaps[i-1].v/FINAL_TO*100);var deltaPct=i===0?0:parseFloat(pct)-prevPct;var deltaPctStr=i===0?'—':(deltaPct>=0?'+':'')+deltaPct.toFixed(3)+'%';tr.innerHTML='<td><b>'+s.t+'</b></td><td class="num">'+s.v.toLocaleString()+'</td><td class="num"><b>'+pct+'%</b></td><td><div class="pct-wrap"><div class="pct-bg"><div class="pct-fill" style="width:'+bw+'%;background:'+bc+'"></div></div></div></td><td class="num" style="color:'+(isG1||isG2?'var(--err)':isFlat?'var(--on2)':'var(--const-green)')+'">'+(i===0?'—':'+'+delta.toLocaleString())+'</td><td class="num" style="color:'+(isG1||isG2?'var(--err)':isFlat?'var(--on2)':'var(--const-green)')+'">'+deltaPctStr+'</td><td>'+tag+'</td>';tb.appendChild(tr);});
 setInterval(function(){var c=Chart.getChart('cTurnout');if(c)c.draw();},50);
 })();
 
 // SHARE DIFF
 (function(){var db=bjtPct.map(function(v){return+(v-FBJT).toFixed(2);}),dp=pppPct.map(function(v){return+(v-FPPP).toFixed(2);});
-new Chart(document.getElementById('cShareDiff'),{type:'line',data:{labels:shareDiffLabels,datasets:[{label:'ภูมิใจไทย (BJT)',data:db,borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,0.07)',borderWidth:2.5,pointRadius:1.5,fill:true,tension:.3},{label:'ประชาชน (PPP)',data:dp,borderColor:'#f97316',backgroundColor:'rgba(249,115,22,0.05)',borderWidth:2.5,pointRadius:1.5,fill:true,tension:.3},{label:'',data:shareDiffLabels.map(function(){return 0;}),borderColor:'#555',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:11},color:'#ccc',boxWidth:12}},tooltip:{callbacks:{label:function(i){if(!i.dataset.label)return null;return' '+i.dataset.label+': '+(i.raw>=0?'+':'')+i.raw+'%';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:50,autoSkip:true,maxTicksLimit:18},grid:{color:dG}},y:{ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:9},color:dT},grid:{color:dG},min:-15,max:15}}}});})();
+new Chart(document.getElementById('cShareDiff'),{type:'line',data:{labels:shareDiffLabels,datasets:[{label:'ภูมิใจไทย (BJT)',data:db,borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,0.07)',borderWidth:2.5,pointRadius:1.5,fill:true,tension:.3},{label:'ประชาชน (PPP)',data:dp,borderColor:'#f97316',backgroundColor:'rgba(249,115,22,0.05)',borderWidth:2.5,pointRadius:1.5,fill:true,tension:.3},{label:'',data:shareDiffLabels.map(function(){return 0;}),borderColor:'#aaa',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:11},color:'#555',boxWidth:12}},tooltip:{callbacks:{label:function(i){if(!i.dataset.label)return null;return' '+i.dataset.label+': '+(i.raw>=0?'+':'')+i.raw+'%';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:50,autoSkip:true,maxTicksLimit:18},grid:{color:dG}},y:{ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:9},color:dT},grid:{color:dG},min:-15,max:15}}}});})();
 
 // DIV BAR
-new Chart(document.getElementById('cDivBar'),{type:'bar',data:{labels:['ภูมิใจไทย (BJT)','เพื่อไทย','กล้าธรรม','ประชาธิปัตย์','ประชาชน (PPP)'],datasets:[{data:[5.6,2.5,1.7,-2.0,-6.4],backgroundColor:['#3b82f6CC','#ef4444CC','#22c55eCC','#60a5faCC','#f97316CC'],borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' '+(i.raw>=0?'+':'')+i.raw+'%';}}}},scales:{x:{min:-10,max:9,ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:10},color:dT},grid:{color:dG}},y:{ticks:{font:{size:11},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cDivBar'),{type:'bar',data:{labels:['ภูมิใจไทย (BJT)','เพื่อไทย','กล้าธรรม','ประชาธิปัตย์','ประชาชน (PPP)'],datasets:[{data:[5.6,2.5,1.7,-2.0,-6.4],backgroundColor:['#3b82f6CC','#ef4444CC','#22c55eCC','#60a5faCC','#f97316CC'],borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' '+(i.raw>=0?'+':'')+i.raw+'%';}}}},scales:{x:{min:-10,max:9,ticks:{callback:function(v){return(v>=0?'+':'')+v+'%';},font:{size:10},color:dT},grid:{color:dG}},y:{ticks:{font:{size:11},color:'#555'},grid:{display:false}}}}});
 
 // REPORTED BAR
-new Chart(document.getElementById('cReported'),{type:'bar',data:{labels:['BJT (175)','เพื่อไทย (60)','กล้าธรรม (55)','ปชป. (10)','PPP (85)'],datasets:[{label:'รายงานแล้ว',data:[100,100,100,80,75.3],backgroundColor:['#3b82f6CC','#ef4444CC','#22c55eCC','#60a5faCC','#f97316CC'],borderRadius:3,stack:'s'},{label:'ยังไม่รายงาน',data:[0,0,0,20,24.7],backgroundColor:['#3b82f622','#ef444422','#22c55e22','#60a5fa22','#f9731622'],borderRadius:3,borderWidth:1,borderColor:['#3b82f666','#ef444466','#22c55e66','#60a5fa66','#f9731666'],stack:'s'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'bottom',labels:{font:{size:10},color:'#ccc',boxWidth:8}}},scales:{x:{min:0,max:105,ticks:{callback:function(v){return v+'%';},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cReported'),{type:'bar',data:{labels:['BJT (175)','เพื่อไทย (60)','กล้าธรรม (55)','ปชป. (10)','PPP (85)'],datasets:[{label:'รายงานแล้ว',data:[100,100,100,80,75.3],backgroundColor:['#3b82f6CC','#ef4444CC','#22c55eCC','#60a5faCC','#f97316CC'],borderRadius:3,stack:'s'},{label:'ยังไม่รายงาน',data:[0,0,0,20,24.7],backgroundColor:['#3b82f622','#ef444422','#22c55e22','#60a5fa22','#f9731622'],borderRadius:3,borderWidth:1,borderColor:['#3b82f666','#ef444466','#22c55e66','#60a5fa66','#f9731666'],stack:'s'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'bottom',labels:{font:{size:10},color:'#555',boxWidth:8}}},scales:{x:{min:0,max:105,ticks:{callback:function(v){return v+'%';},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#555'},grid:{display:false}}}}});
 
 // DOT GRID + MISS21
 (function(){var g=[{n:47,c:'#f97316',b:'1px solid #f97316'},{n:17,c:'#F0C080',b:'1px solid #F0C080'},{n:21,c:'#555',b:'1px dashed #888'}],el=document.getElementById('dotGrid');g.forEach(function(gd){for(var k=0;k<gd.n;k++){var d=document.createElement('div');d.className='dot';d.style.cssText='background:'+gd.c+';border:'+gd.b;el.appendChild(d);}});
@@ -705,10 +705,10 @@ var gP={id:'gp2',beforeDraw:function(ch){var c=ch.ctx,x=ch.scales.x,t=ch.chartAr
 new Chart(document.getElementById('cLead'),{type:'line',plugins:[gP],data:{labels:ll,datasets:[{label:'ภูมิใจไทย (BJT)',data:ls.map(function(s){return s.bjt;}),borderColor:'#3b82f6',backgroundColor:'rgba(59,130,246,0.07)',borderWidth:2.5,pointRadius:2.5,pointBackgroundColor:'#3b82f6',fill:true,tension:.3},{label:'ประชาชน (PPP)',data:ls.map(function(s){return s.ppp;}),borderColor:'#f97316',backgroundColor:'rgba(249,115,22,0.05)',borderWidth:2.5,pointRadius:2.5,pointBackgroundColor:'#f97316',fill:true,tension:.3},{label:'final 175',data:ll.map(function(){return 175;}),borderColor:'#3b82f6',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false},{label:'final 85',data:ll.map(function(){return 85;}),borderColor:'#f97316',borderWidth:1,borderDash:[6,4],pointRadius:0,fill:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' '+i.dataset.label+': '+i.raw+' เขต';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:50,autoSkip:true,maxTicksLimit:16},grid:{color:dG}},y:{min:0,max:195,ticks:{font:{size:10},stepSize:25,color:dT},grid:{color:dG}}}}});})();
 
 // BALLOT DIFF
-(function(){var bd=ballotDiff;new Chart(document.getElementById('cBallotDiff'),{type:'bar',data:{labels:bd.map(function(d){return d.t;}),datasets:[{data:bd.map(function(d){return d.d/1000;}),backgroundColor:bd.map(function(d){return d.d>500000?'rgba(255,180,171,0.8)':d.d>200000?'rgba(255,181,150,0.8)':'rgba(96,165,250,0.8)';}),borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ผลต่าง: '+Math.round(i.raw*1000).toLocaleString()+' ใบ';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},y:{title:{display:true,text:'พันใบ',font:{size:10},color:dT},ticks:{callback:function(v){return v+'K';},font:{size:10},color:dT},grid:{color:dG}}}}});})();
+(function(){var bd=ballotDiff;new Chart(document.getElementById('cBallotDiff'),{type:'bar',data:{labels:bd.map(function(d){return d.t;}),datasets:[{data:bd.map(function(d){return d.d/1000;}),backgroundColor:bd.map(function(d){return d.d>500000?'rgba(196,64,64,0.8)':d.d>200000?'rgba(196,106,58,0.8)':'rgba(96,165,250,0.8)';}),borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ผลต่าง: '+Math.round(i.raw*1000).toLocaleString()+' ใบ';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:45,autoSkip:true,maxTicksLimit:16},grid:{display:false}},y:{title:{display:true,text:'พันใบ',font:{size:10},color:dT},ticks:{callback:function(v){return v+'K';},font:{size:10},color:dT},grid:{color:dG}}}}});})();
 
 // PROV DIFF
-new Chart(document.getElementById('cProvDiff'),{type:'bar',data:{labels:PROV_DIFF.map(function(d){return d.p;}),datasets:[{data:PROV_DIFF.map(function(d){return d.d;}),backgroundColor:PROV_DIFF.map(function(d){return d.d>=0?'rgba(59,130,246,0.75)':'rgba(239,68,68,0.75)';}),borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' '+Number(i.raw).toLocaleString()+' ใบ';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cProvDiff'),{type:'bar',data:{labels:PROV_DIFF.map(function(d){return d.p;}),datasets:[{data:PROV_DIFF.map(function(d){return d.d;}),backgroundColor:PROV_DIFF.map(function(d){return d.d>=0?'rgba(59,130,246,0.75)':'rgba(239,68,68,0.75)';}),borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' '+Number(i.raw).toLocaleString()+' ใบ';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#555'},grid:{display:false}}}}});
 
 // BIG_CONS TABLE
 (function(){var bd=document.getElementById('bigDiffBody');BIG_CONS.forEach(function(r){var tr=document.createElement('tr');var col=r.d>=0?'color:var(--bjt)':'color:var(--err)';tr.innerHTML='<td>'+r.p+'</td><td class="num">'+r.c+'</td><td class="num" style="font-weight:600;'+col+'">'+(r.d>=0?'+':'')+r.d.toLocaleString()+'</td><td>'+pill(r.w)+'</td>';bd.appendChild(tr);});})();
@@ -716,19 +716,19 @@ new Chart(document.getElementById('cProvDiff'),{type:'bar',data:{labels:PROV_DIF
 // VGT
 (function(){var vtL=['16:48','17:08','17:28','17:48','18:08','18:28','18:48','19:08','19:28','19:43','20:38','20:49','22:35','22:39','22:45','22:49','22:51','23:01','23:13','23:31','23:59'];var vtD=[0,0,0,0,0,0,0,0,0,0,0,0,47,49,46,0,0,0,0,0,0];
 new Chart(document.getElementById('cVgt'),{type:'bar',data:{labels:vtL,datasets:[{data:vtD,backgroundColor:vtD.map(function(v){return v>0?'rgba(168,85,247,0.85)':'rgba(100,100,100,0.3)';}),borderRadius:3}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return i.raw>0?' '+i.raw+' เขต (เป็นไปไม่ได้)':' 0 เขต';}}}},scales:{x:{ticks:{font:dF,color:dT,maxRotation:45,autoSkip:false},grid:{display:false}},y:{ticks:{font:{size:10},stepSize:10,color:dT},grid:{color:dG},max:60}}}});
-new Chart(document.getElementById('cVgtProv'),{type:'bar',data:{labels:VGT_PROV.map(function(d){return d.p+' ('+d.n+')';}),datasets:[{data:VGT_PROV.map(function(d){return d.t;}),backgroundColor:'rgba(168,85,247,0.75)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:9},color:'#ccc'},grid:{display:false}}}}});
-new Chart(document.getElementById('cVgtParty'),{type:'bar',data:{labels:VGT_PARTY.map(function(d){return d.p+' ('+d.c+')';}),datasets:[{data:VGT_PARTY.map(function(d){return d.c;}),backgroundColor:['rgba(59,130,246,0.75)','rgba(34,197,94,0.75)','rgba(239,68,68,0.75)','rgba(249,115,22,0.75)','rgba(96,165,250,0.75)','rgba(136,136,136,0.75)'],borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}},y:{ticks:{stepSize:5,font:{size:9},color:dT},grid:{color:dG}}}}});
+new Chart(document.getElementById('cVgtProv'),{type:'bar',data:{labels:VGT_PROV.map(function(d){return d.p+' ('+d.n+')';}),datasets:[{data:VGT_PROV.map(function(d){return d.t;}),backgroundColor:'rgba(168,85,247,0.75)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:9},color:'#555'},grid:{display:false}}}}});
+new Chart(document.getElementById('cVgtParty'),{type:'bar',data:{labels:VGT_PARTY.map(function(d){return d.p+' ('+d.c+')';}),datasets:[{data:VGT_PARTY.map(function(d){return d.c;}),backgroundColor:['rgba(59,130,246,0.75)','rgba(34,197,94,0.75)','rgba(239,68,68,0.75)','rgba(249,115,22,0.75)','rgba(96,165,250,0.75)','rgba(136,136,136,0.75)'],borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:10},color:'#555'},grid:{display:false}},y:{ticks:{stepSize:5,font:{size:9},color:dT},grid:{color:dG}}}}});
 var vb=document.getElementById('vgtConsBody');VGT_CONS.forEach(function(r){var tr=document.createElement('tr');tr.innerHTML='<td>'+r.p+'</td><td class="num">'+r.c+'</td><td class="num" style="color:#a855f7;font-weight:600">+'+r.e.toLocaleString()+'</td><td>'+pill(r.w)+'</td>';vb.appendChild(tr);});})();
 
 // PARTY BREAKDOWN — already declared above in data section
 
 // DECREASE
 new Chart(document.getElementById('cDecrease'),{type:'bar',data:{labels:decEvents.map(function(d){return d.t;}),datasets:[{label:'สส.แบ่งเขต + บัญชีรายชื่อ',data:decEvents.map(function(d){return Math.abs(d.dec);}),backgroundColor:'rgba(255,77,77,0.7)',borderRadius:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ลดลงรวม: −'+Number(i.raw).toLocaleString()+' คะแนน (ทั้ง 2 ใบ)';}}}},scales:{x:{ticks:{font:{size:8},color:dT,maxRotation:60,autoSkip:false},grid:{display:false}},y:{ticks:{callback:function(v){return '−'+v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}}}}});
-new Chart(document.getElementById('cPartyDec'),{type:'bar',data:{labels:partyDec.map(function(d){return d.p;}),datasets:[{data:partyDec.map(function(d){return d.total;}),backgroundColor:'rgba(255,77,77,0.7)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){var d=partyDec[i.dataIndex];return' ลด '+Number(i.raw).toLocaleString()+(d?' ('+d.pct+'%)':'');}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:10},color:dT},grid:{color:dG}},y:{ticks:{font:{size:11},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cPartyDec'),{type:'bar',data:{labels:partyDec.map(function(d){return d.p;}),datasets:[{data:partyDec.map(function(d){return d.total;}),backgroundColor:'rgba(255,77,77,0.7)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){var d=partyDec[i.dataIndex];return' ลด '+Number(i.raw).toLocaleString()+(d?' ('+d.pct+'%)':'');}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:10},color:dT},grid:{color:dG}},y:{ticks:{font:{size:11},color:'#555'},grid:{display:false}}}}});
 // CONST DECREASE BY PARTY
-new Chart(document.getElementById('cConstDec'),{type:'bar',data:{labels:constDecByParty.map(function(d){return d.p;}),datasets:[{data:constDecByParty.map(function(d){return d.total;}),backgroundColor:['#f97316CC','#3b82f6CC','#22c55eCC','#ef4444CC','#60a5faCC','#888888CC'],borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ลด '+Number(i.raw).toLocaleString()+' คะแนน';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cConstDec'),{type:'bar',data:{labels:constDecByParty.map(function(d){return d.p;}),datasets:[{data:constDecByParty.map(function(d){return d.total;}),backgroundColor:['#f97316CC','#3b82f6CC','#22c55eCC','#ef4444CC','#60a5faCC','#888888CC'],borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ลด '+Number(i.raw).toLocaleString()+' คะแนน';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#555'},grid:{display:false}}}}});
 // PL DECREASE BY PARTY
-new Chart(document.getElementById('cPlDec'),{type:'bar',data:{labels:plDecByParty.map(function(d){return d.p;}),datasets:[{data:plDecByParty.map(function(d){return d.total;}),backgroundColor:['#f97316CC','#3b82f6CC','#22c55eCC','#ef4444CC','#60a5faCC','#888888CC'],borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ลด '+Number(i.raw).toLocaleString()+' คะแนน';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cPlDec'),{type:'bar',data:{labels:plDecByParty.map(function(d){return d.p;}),datasets:[{data:plDecByParty.map(function(d){return d.total;}),backgroundColor:['#f97316CC','#3b82f6CC','#22c55eCC','#ef4444CC','#60a5faCC','#888888CC'],borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(i){return' ลด '+Number(i.raw).toLocaleString()+' คะแนน';}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#555'},grid:{display:false}}}}});
 (function(){var tb=document.getElementById('topDecTable');topCands.forEach(function(c){var tr=document.createElement('tr');tr.innerHTML='<td>'+c.prov+'</td><td class="num">'+c.cons+'</td><td>'+pill(c.party)+'</td><td>'+c.name+'</td><td class="num" style="color:var(--err);font-weight:600">'+c.dec.toLocaleString()+'</td>';tb.appendChild(tr);});})();
 
 // FLIP TABLES (2-part split)
@@ -809,7 +809,7 @@ var spoiledData=[
 // Spoiled vs Margin Bar Chart (top 10)
 (function(){
 var top10=spoiledData.slice(0,10);
-new Chart(document.getElementById('cSpoiledMargin'),{type:'bar',data:{labels:top10.map(function(d){return d.p+' '+d.c;}),datasets:[{label:'บัตรเสีย',data:top10.map(function(d){return d.sp;}),backgroundColor:'rgba(255,180,171,0.75)',borderRadius:3},{label:'ส่วนต่างคะแนน',data:top10.map(function(d){return d.mg;}),backgroundColor:'rgba(148,219,0,0.75)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},color:'#ccc',boxWidth:10}},tooltip:{callbacks:{label:function(i){return' '+i.dataset.label+': '+Number(i.raw).toLocaleString();}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#ccc'},grid:{display:false}}}}});
+new Chart(document.getElementById('cSpoiledMargin'),{type:'bar',data:{labels:top10.map(function(d){return d.p+' '+d.c;}),datasets:[{label:'บัตรเสีย',data:top10.map(function(d){return d.sp;}),backgroundColor:'rgba(196,64,64,0.75)',borderRadius:3},{label:'ส่วนต่างคะแนน',data:top10.map(function(d){return d.mg;}),backgroundColor:'rgba(90,138,0,0.75)',borderRadius:3}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,position:'top',labels:{font:{size:10},color:'#555',boxWidth:10}},tooltip:{callbacks:{label:function(i){return' '+i.dataset.label+': '+Number(i.raw).toLocaleString();}}}},scales:{x:{ticks:{callback:function(v){return v.toLocaleString();},font:{size:9},color:dT},grid:{color:dG}},y:{ticks:{font:{size:10},color:'#555'},grid:{display:false}}}}});
 })();
 
 // Spoiled vs Margin table (redesigned with visual bars)
@@ -822,8 +822,8 @@ spoiledData.forEach(function(d,i){
   var spPct=Math.round((d.sp/maxSp)*100);
   var mgPct=Math.round((d.mg/maxSp)*100);
   var barHtml='<div style="position:relative;height:16px;background:var(--s-hi);border-radius:3px;overflow:hidden">'+
-    '<div style="position:absolute;height:100%;width:'+spPct+'%;background:rgba(255,180,171,0.5);border-radius:3px"></div>'+
-    '<div style="position:absolute;height:100%;width:'+mgPct+'%;background:rgba(148,219,0,0.6);border-radius:3px"></div></div>';
+    '<div style="position:absolute;height:100%;width:'+spPct+'%;background:rgba(196,64,64,0.5);border-radius:3px"></div>'+
+    '<div style="position:absolute;height:100%;width:'+mgPct+'%;background:rgba(90,138,0,0.6);border-radius:3px"></div></div>';
   tr.innerHTML='<td style="color:var(--on2);font-size:.65rem;text-align:center">'+(i+1)+'</td>'+
     '<td style="font-size:.7rem;white-space:nowrap">'+d.p+' '+d.c+'</td>'+
     '<td style="font-size:.65rem;color:var(--on)">'+d.w+'</td>'+
